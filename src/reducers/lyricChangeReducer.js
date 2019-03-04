@@ -3,6 +3,7 @@ const { initialState, types } = constants;
 
 const lyricChangeReducer = (state = initialState.songsById, action) => {
   const {title,artist,songId,songArray,arrayPosition} = action;
+  let newState;
   let newSongsByIdEntry;
   let newSongsByIdStateSlice;
 
@@ -25,7 +26,7 @@ const lyricChangeReducer = (state = initialState.songsById, action) => {
     });
     return newSongsByIdStateSlice;
   case types.ADD_SONG:
-    let newState = Object.assign({},state,{
+    newState = Object.assign({},state,{
       [songId]: {
         title: title,
         artist: artist,
