@@ -48,13 +48,13 @@ function AddSong(props){
 }
 
 AddSong.PropTypes={
-    song: PropTypes.object,
-    id: PropTypes.number,
-    title: PropTypes.string,
-    artist: PropTypes.string,
-    songArray: PropTypes.array,
-    arrayPosition: PropTypes.number,
-    dispatch: PropTypes.func
-  };
+  song: PropTypes.object,
+  id: PropTypes.number,
+  title: PropTypes.string,
+  artist: PropTypes.string,
+  songArray: PropTypes.array,
+  arrayPosition: PropTypes.number,
+  dispatch: PropTypes.func
+};
 
 export default connect()(AddSong);
